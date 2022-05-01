@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body {
+    font-family: "poppins";
+}
+
+.container {
+    /* border: 1px solid black; */
+    width: 700px;
+    margin: 200px auto;
+}
+
+.count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* gap: 100px; */
+    margin-bottom: 30px;
+}
+
+.count p {
+    font-size: 156px;
+}
+
+.count .p {
+    width: 400px;
+    /* border: 1px solid black; */
+
+}
+
+.count button {
+    padding: 10px;
+    width: 40px;
+}
+
+#plus {
+    border: none;
+    background-color: green;
+    color: white;
+}
+
+#plus:hover {
+    cursor: pointer;
+    background-color: darkgreen;
+}
+
+#minus {
+    border: none;
+    background-color: red;
+    color: white;
+}
+
+#minus:hover {
+    cursor: pointer;
+    background-color: darkred;
+}
+
+#reset {
+    border: none;
+    padding: 8px;
+    width: 80px;
+    background-color: blue;
+    color: white;
+}
+
+#reset:hover {
+    cursor: pointer;
+    background-color: darkblue;
+}
