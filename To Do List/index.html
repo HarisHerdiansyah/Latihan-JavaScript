@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css">
+    <style>
+        .container {
+            width: 600px;
+        }
+
+        .fa-trash-alt,
+        .fa-edit {
+            font-size: 22px;
+        }
+
+        .form-check-input,
+        .fa-trash-alt:hover,
+        .fa-edit {
+            cursor: pointer;
+        }
+
+        .list-group-item:hover {
+            background-color: #f8f9fa;
+        }
+
+        @media screen and (max-width: 575px) {
+            .container {
+                width: 300px;
+            }
+        }
+    </style>
+
+    <title>To Do List Sederhana</title>
+</head>
+
+<body>
+
+    <div class="container border p-0 my-5">
+        <header class="text-bg-dark p-4">
+            <h1>To Do List</h1>
+            <p>Buat List Kamu Disini!</p>
+        </header>
+
+        <div class="input-group my-3 mx-auto w-75">
+            <input type="text" class="form-control" id="input-text" placeholder="Ketik disini..." onkeydown="addListKey(event)">
+            <button class="btn btn-dark" type="button" onclick="addList()">Tambah</button>
+        </div>
+
+        <div class="to-do-list">
+            <ul class="list-group list-group-flush" id="to-do-list">
+
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal untuk mengedit list -->
+    <div class="modal fade " id="myModal">
+
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Edit Disini</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <input type="text" class="form-control" id="input-edit" placeholder="Ketik disini...">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Tutup</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="edit">Edit</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
+    </script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous">
+    </script>
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
