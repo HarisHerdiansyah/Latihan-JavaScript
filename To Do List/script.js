@@ -24,11 +24,13 @@ function removeList(removeBtn) {
     removeBtn.parentElement.remove();
 }
 
-document.getElementById('edit').addEventListener('click', function () {
-    document.querySelector('.listText').innerText = inputEdit.value;
-    inputEdit.value = "";
-});
+toDoList.addEventListener('click', function(e) {
+    inputEdit.value = e.target.previousElementSibling.previousElementSibling.innerText;
 
+    document.getElementById('edit').addEventListener('click', function() {
+        e.target.previousElementSibling.previousElementSibling.innerText = inputEdit.value;
+    });
+});
 
 function addListKey(event) {
     if (event.key == "Enter") {
